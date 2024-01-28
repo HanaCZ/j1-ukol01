@@ -16,7 +16,65 @@ public class HlavniProgram {
 
     nakresliPrasatko();
 
+    zofka.turnLeft(90);
+    zofka.move(190);
+
+    nakresliOsmiuhelnik();
+
+    zofka.move(200);
+
+    nakresliKolecko();
+
+    zofka.turnRight(180);
+    zofka.move(700);
+
+    nakresliSlunicko();
+
 }
+
+  private void nakresliSlunicko() {
+    zofka.penDown();
+    for (int i = 0; i < 24; i++) {
+      nakresliCastSlunicka();
+
+    }
+    zofka.penUp();
+
+  }
+
+  private void nakresliCastSlunicka() {
+    zofka.move(10);
+
+    zofka.turnRight(90);
+    zofka.move(10);
+    zofka.penUp();
+    zofka.turnRight(180);
+    zofka.move(10);
+    zofka.turnRight(90);
+    zofka.penDown();
+
+    zofka.turnLeft(15);
+
+  }
+
+  private void nakresliKolecko() {
+    zofka.penDown();
+    for (int i = 0; i < 48; i++) {
+      zofka.move(10);
+      zofka.turnRight(7.5);
+    }
+    zofka.penUp();
+  }
+
+  private void nakresliOsmiuhelnik() {
+    zofka.penDown();
+    for (int i = 0; i < 8; i++) {
+      zofka.move(50);
+      zofka.turnRight(45);
+    }
+    zofka.penUp();
+
+  }
 
   private void nakresliPrasatko() {
     zofka.penDown();
