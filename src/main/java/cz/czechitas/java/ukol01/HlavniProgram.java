@@ -13,6 +13,60 @@ public class HlavniProgram {
     zofka = new Turtle();
 
     //TODO implementace domácího úkolu
-  }
+
+    nakresliPrasatko();
 
 }
+
+  private void nakresliPrasatko() {
+    zofka.penDown();
+    zofka.move(150);
+    zofka.turnRight(90);
+    zofka.move(200);
+    zofka.turnRight(90);
+    zofka.move(150);
+    zofka.turnRight(90);
+    zofka.move(200);
+
+    nakresliStrechu();
+
+    zofka.penUp();
+    zofka.turnRight(120);
+    zofka.move(150);
+
+    nakresliNozicky();
+
+    zofka.turnRight(130);
+    zofka.move(200);
+    zofka.turnRight(90);
+
+    nakresliNozicky();
+
+    zofka.turnLeft(50);
+    zofka.move(200);
+    zofka.turnRight(90);
+  }
+
+  private void nakresliNozicky() {
+    zofka.penDown();
+    zofka.turnRight(40);
+    zofka.move(50);
+    zofka.penUp();
+    zofka.turnRight(180);
+    zofka.move(50);
+    zofka.turnRight(100);
+    zofka.penDown();
+    zofka.move(50);
+    zofka.penUp();
+    zofka.turnRight(180);
+    zofka.move(50);
+  }
+
+  private void nakresliStrechu() {
+    zofka.turnRight(30);
+    zofka.move(150);
+    zofka.turnRight(120);
+    zofka.move(150);
+  }
+
+  }
